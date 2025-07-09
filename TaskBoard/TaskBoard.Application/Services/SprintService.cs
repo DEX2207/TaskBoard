@@ -27,7 +27,7 @@ public class SprintService:ISprintService
 
         var userRole = role.First().Roles;
 
-        if (userRole != Roles.Administrator && userRole != Roles.Manager)
+        if (userRole != Roles.administrator && userRole != Roles.manager)
             throw new UnauthorizedAccessException("У вас нет прав создавать спринты.");
 
         var sprint = _mapper.Map<Sprint>(dto);
@@ -48,7 +48,7 @@ public class SprintService:ISprintService
             throw new UnauthorizedAccessException("Вы не состоите в этом проекте.");
 
         var userRole = role.First().Roles;
-        if (userRole != Roles.Administrator && userRole != Roles.Manager)
+        if (userRole != Roles.administrator && userRole != Roles.manager)
             throw new UnauthorizedAccessException("У вас нет прав удалять спринты.");
 
         _unitOfWork.Sprints.Delete(sprint);

@@ -23,8 +23,8 @@ public class TaskService:ITaskService
         var currentSprint=TaskSprint.FirstOrDefault();
         var role = await _unitOfWork.Roles.FindAsync(r =>
             r.ProjectId == currentSprint.ProjectId && r.UserId == currentUserId);
-        var isAdmin = role.First().Roles == Roles.Administrator;
-        var isManager = role.First().Roles == Roles.Manager;
+        var isAdmin = role.First().Roles == Roles.administrator;
+        var isManager = role.First().Roles == Roles.manager;
         if (!isAdmin && !isManager)
             throw new UnauthorizedAccessException("Только админ или менеджер может задавать задачи");
 
@@ -47,8 +47,8 @@ public class TaskService:ITaskService
         var currentSprint=TaskSprint.FirstOrDefault();
         var role = await _unitOfWork.Roles.FindAsync(r =>
             r.ProjectId == currentSprint.ProjectId && r.UserId == currentUserId);
-        var isAdmin = role.First().Roles == Roles.Administrator;
-        var isManager = role.First().Roles == Roles.Manager;
+        var isAdmin = role.First().Roles == Roles.administrator;
+        var isManager = role.First().Roles == Roles.manager;
         if (!isAdmin && !isManager)
             throw new UnauthorizedAccessException("Только администратор и модератор могут удалять задачи");
         _unitOfWork.Tasks.Delete(task);
@@ -100,8 +100,8 @@ public class TaskService:ITaskService
         if (sprint == null)
             throw new UnauthorizedAccessException("Спринт не найден");
         var currentRole = await _unitOfWork.Roles.FindAsync(r => r.ProjectId == sprint.ProjectId && r.UserId == currentUserId);
-        var isAdmin = currentRole.First().Roles == Roles.Administrator;
-        var isManager = currentRole.First().Roles == Roles.Manager;
+        var isAdmin = currentRole.First().Roles == Roles.administrator;
+        var isManager = currentRole.First().Roles == Roles.manager;
         if (!isAdmin && !isManager)
             throw new UnauthorizedAccessException("Только администратор и менеджер может просматривать все задачи в спринте");
 

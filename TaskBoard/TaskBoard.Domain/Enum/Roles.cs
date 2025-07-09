@@ -2,7 +2,7 @@ namespace TaskBoard.Domain.Enum;
 
 public enum Roles
 {
-    Administrator=0,
-    Manager=1,
-    User=2
+    administrator=0,
+    manager=1,
+    user=2
 }

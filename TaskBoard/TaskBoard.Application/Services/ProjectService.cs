@@ -28,7 +28,7 @@ public class ProjectService: IProjectService
         {
             ProjectId = project.Id,
             UserId = userId,
-            Roles = Roles.Administrator
+            Roles = Roles.administrator
         };
 
         await _unitOfWork.Roles.AddAsync(role);
@@ -40,7 +40,7 @@ public class ProjectService: IProjectService
     public async Task DeleteProjectAsync(int projectId, int userId)
     {
         var role = await _unitOfWork.Roles.FindAsync(r => r.ProjectId == projectId && r.UserId == userId);
-        if (!role.Any() || role.First().Roles != Roles.Administrator)
+        if (!role.Any() || role.First().Roles != Roles.administrator)
             throw new UnauthorizedAccessException("Только администратор может удалить проект");
 
         var project = await _unitOfWork.Projects.GetByIdAsync(projectId);
@@ -74,8 +74,8 @@ public class ProjectService: IProjectService
         if (!currentUserRole.Any())
             throw new UnauthorizedAccessException("Вы не состоите в проекте.");
 
-        var isAdmin = currentUserRole.First().Roles == Roles.Administrator;
-        var isManager = currentUserRole.First().Roles == Roles.Manager;
+        var isAdmin = currentUserRole.First().Roles == Roles.administrator;
+        var isManager = currentUserRole.First().Roles == Roles.manager;
 
         if (!isAdmin && !isManager)
             throw new UnauthorizedAccessException("У вас нет прав добавлять пользователей в проект.");
@@ -105,7 +105,7 @@ public class ProjectService: IProjectService
         }
         else
         {
-            var assignedRole = isManager ? Roles.User : dto.Role;
+            var assignedRole = isManager ? Roles.user : dto.Role;
 
             var newRole = new Role
             {

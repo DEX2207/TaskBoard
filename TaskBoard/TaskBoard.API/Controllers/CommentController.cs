@@ -33,7 +33,7 @@ public class CommentController:ControllerBase
     }
 
     [HttpGet("sprint/{sprintId}")]
-    public async Task<IActionResult> GetCommentForComment(int sprintId)
+    public async Task<IActionResult> GetCommentsForSprint(int sprintId)
     {
         var comments=await _commentService.GetCommentsBySprintAsync(sprintId);
         return Ok(comments);

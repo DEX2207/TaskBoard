@@ -34,7 +34,7 @@ public class UserController:ControllerBase
     [HttpPost("login")]
     public async Task<ActionResult<LoginResponseDto>> Login([FromBody] LoginDto dto)
     {
-        var response = await _userService.LoginAsync(dto.UserName, dto.Password);
+        var response = await _userService.LoginAsync(dto.Email, dto.Password);
         return Ok(response);
     }
 
