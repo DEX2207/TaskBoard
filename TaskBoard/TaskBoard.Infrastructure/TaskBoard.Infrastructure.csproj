@@ -26,5 +26,9 @@
       <ProjectReference Include="..\TaskBoard.Application\TaskBoard.Application.csproj" />
       <ProjectReference Include="..\TaskBoard.Domain\TaskBoard.Domain.csproj" />
     </ItemGroup>
+    
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
 
 </Project>

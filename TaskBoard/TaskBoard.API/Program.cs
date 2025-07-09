@@ -20,6 +20,7 @@ builder.Services.AddAutoMapper(config =>
 builder.Services.AddMemoryCache();
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+builder.Services.AddScoped<IFileStorage, FileStorage>();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 

@@ -1257,7 +1257,10 @@
         },
         "runtime": {
           "bin/placeholder/TaskBoard.Infrastructure.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
