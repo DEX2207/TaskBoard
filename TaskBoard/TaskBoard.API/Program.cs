@@ -1,18 +1,49 @@
+using System.Text;
 using Microsoft.EntityFrameworkCore;
-using Npgsql;
-using TaskBoard.Domain.Enum;
+using Microsoft.IdentityModel.Tokens;
+using TaskBoard.Application;
+using TaskBoard.Domain.Interfaces;
 using TaskBoard.Infrastructure;
-using TaskStatus = TaskBoard.Domain.Enum.TaskStatus;
+using TaskBoard.Infrastructure.Jwt;
+using TaskBoard.Infrastructure.Repository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//NpgsqlConnection.GlobalTypeMapper.MapEnum<Roles>("roles");
-//NpgsqlConnection.GlobalTypeMapper.MapEnum<TaskStatus>("task_status");
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddAutoMapper(config =>
+{
+    config.AddProfile<MappingProfile>();
+});
+builder.Services.AddMemoryCache();
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<AppDbContext>(options=>
     options.UseNpgsql(connectionString));
+
+var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();
+
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer("Bearer", options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = jwtSettings.Issuer,
+
+            ValidateAudience = true,
+            ValidAudience = jwtSettings.Audience,
+
+            ValidateLifetime = true,
+
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Secret)),
+        };
+    });
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

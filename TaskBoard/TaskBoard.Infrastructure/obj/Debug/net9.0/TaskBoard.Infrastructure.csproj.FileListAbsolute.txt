@@ -15,3 +15,6 @@ D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard
 D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.Infrastructure\obj\Debug\net9.0\TaskBoard.Infrastructure.pdb
 D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.Infrastructure\obj\Debug\net9.0\TaskBoard.Infrastructure.genruntimeconfig.cache
 D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.Infrastructure\obj\Debug\net9.0\ref\TaskBoard.Infrastructure.dll
+D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.Infrastructure\bin\Debug\net9.0\TaskBoard.Application.dll
+D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.Infrastructure\bin\Debug\net9.0\TaskBoard.Application.pdb
+D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.Infrastructure\obj\Debug\net9.0\TaskBoard.Infrastructure.sourcelink.json

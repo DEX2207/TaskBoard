@@ -12,4 +12,6 @@ public class User
     public ICollection<Files> Files { get; set; }
     public ICollection<Role> Roles { get; set; }
     public ICollection<TaskComment> Comments { get; set; }
+    
+    public ICollection<TaskExecutor> AssignedTasks { get; set; }
 }

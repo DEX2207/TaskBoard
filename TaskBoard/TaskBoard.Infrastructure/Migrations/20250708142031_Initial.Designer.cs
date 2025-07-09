@@ -12,7 +12,7 @@ using TaskBoard.Infrastructure;
 namespace TaskBoard.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250708020222_Initial")]
+    [Migration("20250708142031_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -205,6 +205,21 @@ namespace TaskBoard.Infrastructure.Migrations
                     b.ToTable("TaskComments");
                 });
 
+            modelBuilder.Entity("TaskBoard.Domain.Entities.TaskExecutor", b =>
+                {
+                    b.Property<int>("TaskId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("TaskId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("TaskExecutor");
+                });
+
             modelBuilder.Entity("TaskBoard.Domain.Entities.User", b =>
                 {
                     b.Property<int>("Id")
@@ -324,6 +339,25 @@ namespace TaskBoard.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("TaskBoard.Domain.Entities.TaskExecutor", b =>
+                {
+                    b.HasOne("TaskBoard.Domain.Entities.Task", "Task")
+                        .WithMany("Executors")
+                        .HasForeignKey("TaskId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TaskBoard.Domain.Entities.User", "User")
+                        .WithMany("AssignedTasks")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Task");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("TaskBoard.Domain.Entities.Project", b =>
                 {
                     b.Navigation("Roles");
@@ -344,11 +378,15 @@ namespace TaskBoard.Infrastructure.Migrations
                 {
                     b.Navigation("Comments");
 
+                    b.Navigation("Executors");
+
                     b.Navigation("Files");
                 });
 
             modelBuilder.Entity("TaskBoard.Domain.Entities.User", b =>
                 {
+                    b.Navigation("AssignedTasks");
+
                     b.Navigation("Comments");
 
                     b.Navigation("Files");

@@ -188,6 +188,30 @@ namespace TaskBoard.Infrastructure.Migrations
                         onDelete: ReferentialAction.SetNull);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "TaskExecutor",
+                columns: table => new
+                {
+                    TaskId = table.Column<int>(type: "integer", nullable: false),
+                    UserId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TaskExecutor", x => new { x.TaskId, x.UserId });
+                    table.ForeignKey(
+                        name: "FK_TaskExecutor_Tasks_TaskId",
+                        column: x => x.TaskId,
+                        principalTable: "Tasks",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TaskExecutor_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Files_SprintId",
                 table: "Files",
@@ -229,6 +253,11 @@ namespace TaskBoard.Infrastructure.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_TaskExecutor_UserId",
+                table: "TaskExecutor",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Tasks_SprintId",
                 table: "Tasks",
                 column: "SprintId");
@@ -245,6 +274,9 @@ namespace TaskBoard.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "TaskComments");
+
+            migrationBuilder.DropTable(
+                name: "TaskExecutor");
 
             migrationBuilder.DropTable(
                 name: "Tasks");

@@ -32,5 +32,6 @@ public class AppDbContext: DbContext
         modelBuilder.ApplyConfiguration(new SprintConfiguration());
         modelBuilder.ApplyConfiguration(new TaskConfiguration());
         modelBuilder.ApplyConfiguration(new TaskCommentConfiguration());
+        modelBuilder.ApplyConfiguration(new TaskExecutorConfiguration());
     }
 }

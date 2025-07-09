@@ -1,3 +1,5 @@
+using TaskStatus = TaskBoard.Domain.Enum.TaskStatus;
+
 namespace TaskBoard.Domain.Entities;
 
 public class Task
@@ -11,4 +13,6 @@ public class Task
     public Sprint Sprint { get; set; }
     public ICollection<Files> Files { get; set; }
     public ICollection<TaskComment> Comments { get; set; }
+    
+    public ICollection<TaskExecutor> Executors { get; set; }
 }
