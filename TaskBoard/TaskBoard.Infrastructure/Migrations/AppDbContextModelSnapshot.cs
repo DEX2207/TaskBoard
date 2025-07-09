@@ -138,7 +138,7 @@ namespace TaskBoard.Infrastructure.Migrations
                     b.ToTable("Sprints");
                 });
 
-            modelBuilder.Entity("TaskBoard.Domain.Entities.Task", b =>
+            modelBuilder.Entity("TaskBoard.Domain.Entities.Tasks", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -253,7 +253,7 @@ namespace TaskBoard.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TaskBoard.Domain.Entities.Task", "Task")
+                    b.HasOne("TaskBoard.Domain.Entities.Tasks", "Tasks")
                         .WithMany("Files")
                         .HasForeignKey("TaskId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -265,7 +265,7 @@ namespace TaskBoard.Infrastructure.Migrations
 
                     b.Navigation("Sprint");
 
-                    b.Navigation("Task");
+                    b.Navigation("Tasks");
 
                     b.Navigation("User");
                 });
@@ -300,7 +300,7 @@ namespace TaskBoard.Infrastructure.Migrations
                     b.Navigation("Project");
                 });
 
-            modelBuilder.Entity("TaskBoard.Domain.Entities.Task", b =>
+            modelBuilder.Entity("TaskBoard.Domain.Entities.Tasks", b =>
                 {
                     b.HasOne("TaskBoard.Domain.Entities.Sprint", "Sprint")
                         .WithMany("Tasks")
@@ -319,7 +319,7 @@ namespace TaskBoard.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TaskBoard.Domain.Entities.Task", "Task")
+                    b.HasOne("TaskBoard.Domain.Entities.Tasks", "Tasks")
                         .WithMany("Comments")
                         .HasForeignKey("TaskId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -331,14 +331,14 @@ namespace TaskBoard.Infrastructure.Migrations
 
                     b.Navigation("Sprint");
 
-                    b.Navigation("Task");
+                    b.Navigation("Tasks");
 
                     b.Navigation("User");
                 });
 
             modelBuilder.Entity("TaskBoard.Domain.Entities.TaskExecutor", b =>
                 {
-                    b.HasOne("TaskBoard.Domain.Entities.Task", "Task")
+                    b.HasOne("TaskBoard.Domain.Entities.Tasks", "Tasks")
                         .WithMany("Executors")
                         .HasForeignKey("TaskId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -350,7 +350,7 @@ namespace TaskBoard.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Task");
+                    b.Navigation("Tasks");
 
                     b.Navigation("User");
                 });
@@ -371,7 +371,7 @@ namespace TaskBoard.Infrastructure.Migrations
                     b.Navigation("Tasks");
                 });
 
-            modelBuilder.Entity("TaskBoard.Domain.Entities.Task", b =>
+            modelBuilder.Entity("TaskBoard.Domain.Entities.Tasks", b =>
                 {
                     b.Navigation("Comments");
 

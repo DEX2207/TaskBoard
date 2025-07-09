@@ -2,6 +2,7 @@ using System.Security.Cryptography;
 using AutoMapper;
 using Microsoft.Extensions.Caching.Memory;
 using TaskBoard.Application.DTO;
+using TaskBoard.Application.Interfaces;
 using TaskBoard.Domain.Entities;
 using Task = System.Threading.Tasks.Task;
 

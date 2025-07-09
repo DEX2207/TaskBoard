@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskBoard.Domain.Entities;
-using Task = TaskBoard.Domain.Entities.Task;
 
 namespace TaskBoard.Infrastructure.Configurations;
 

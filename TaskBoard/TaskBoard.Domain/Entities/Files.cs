@@ -12,6 +12,6 @@ public class Files
     public DateTime UploadDate { get; set; }
     
     public Sprint Sprint { get; set; }
-    public Task? Task { get; set; }
+    public Tasks? Task { get; set; }
     public User? User { get; set; }
 }

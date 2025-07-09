@@ -1,14 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskBoard.Domain.Entities;
-using Task = TaskBoard.Domain.Entities.Task;
 
 
 namespace TaskBoard.Infrastructure.Configurations;
 
-public class TaskConfiguration:IEntityTypeConfiguration<Task>
+public class TaskConfiguration:IEntityTypeConfiguration<Tasks>
 {
-    public void Configure(EntityTypeBuilder<Task> builder)
+    public void Configure(EntityTypeBuilder<Tasks> builder)
     {
         builder.HasKey(x => x.Id);
         

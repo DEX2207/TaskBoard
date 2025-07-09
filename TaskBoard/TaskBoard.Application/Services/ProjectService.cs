@@ -1,5 +1,6 @@
 using AutoMapper;
 using TaskBoard.Application.DTO;
+using TaskBoard.Application.Interfaces;
 using TaskBoard.Domain.Entities;
 using TaskBoard.Domain.Enum;
 using Task = System.Threading.Tasks.Task;

@@ -137,3 +137,10 @@ D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard
 D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.API\bin\Debug\net9.0\TaskBoard.Application.dll
 D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.API\bin\Debug\net9.0\TaskBoard.Application.pdb
 D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.API\obj\Debug\net9.0\TaskBoard.API.sourcelink.json
+D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.API\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.API\bin\Debug\net9.0\MailKit.dll
+D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.API\bin\Debug\net9.0\MimeKit.dll
+D:\INTER (E)\1111\учебная практика\3 курс\TaskBoard\TaskBoard\TaskBoard.API\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

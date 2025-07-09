@@ -1,7 +1,7 @@
 using TaskBoard.Application;
+using TaskBoard.Application.Interfaces;
 using TaskBoard.Domain.Entities;
 using TaskBoard.Domain.Interfaces;
-using Task = TaskBoard.Domain.Entities.Task;
 
 namespace TaskBoard.Infrastructure.Repository;
 
@@ -11,7 +11,7 @@ public class UnitOfWork:IUnitOfWork
 
     public IRepository<Project> Projects { get; }
     public IRepository<Sprint> Sprints { get; }
-    public IRepository<Task> Tasks { get; }
+    public IRepository<Tasks> Tasks { get; }
     public IRepository<User> Users { get; }
     public IRepository<TaskComment> Comments { get; } 
     public IRepository<Files> Files { get; }
@@ -23,7 +23,7 @@ public class UnitOfWork:IUnitOfWork
         _context = context;
         Projects = new Repository<Project>(_context);
         Sprints = new Repository<Sprint>(_context);
-        Tasks = new Repository<Task>(_context);
+        Tasks = new Repository<Tasks>(_context);
         Users = new Repository<User>(_context);
         Comments = new Repository<TaskComment>(_context);
         Files = new Repository<Files>(_context);

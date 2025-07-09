@@ -11,5 +11,5 @@ public class TaskComment
     
     public Sprint Sprint { get; set; }
     public User? User { get; set; }
-    public Task? Task { get; set; }
+    public Tasks? Task { get; set; }
 }

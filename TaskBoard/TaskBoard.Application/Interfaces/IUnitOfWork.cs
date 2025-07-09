@@ -1,14 +1,13 @@
 using TaskBoard.Domain.Entities;
 using TaskBoard.Domain.Interfaces;
-using Task = TaskBoard.Domain.Entities.Task;
 
-namespace TaskBoard.Application;
+namespace TaskBoard.Application.Interfaces;
 
 public interface IUnitOfWork:IAsyncDisposable
 {
     IRepository<Project> Projects { get; }
     IRepository<Sprint> Sprints { get; }
-    IRepository<Task> Tasks { get; }
+    IRepository<Tasks> Tasks { get; }
     IRepository<User> Users { get; }
     
     IRepository<TaskComment> Comments { get; }

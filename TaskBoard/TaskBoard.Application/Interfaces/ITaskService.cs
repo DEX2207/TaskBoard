@@ -4,10 +4,9 @@ namespace TaskBoard.Application.Interfaces;
 
 public interface ITaskService
 {
-    Task<TaskDto> CreateTaskAsync(CreateTaskDto dto);
-    Task DeleteTaskAsync(int taskId);
+    Task<TaskDto> CreateTaskAsync(CreateTaskDto dto,int currentUserId);
+    Task DeleteTaskAsync(int taskId,int currentUserId);
     Task AssignUserToTaskAsync(AssignTaskDto dto);
     Task<List<TaskDto>> GetUserTasksInSprintAsync(int sprintId, int userId);
-    Task<TaskDto?> GetTaskByIdAsync(int taskId);
-    Task<List<TaskDto>> GetTasksForSprintAsync(int sprintId);
+    Task<List<TaskDto>> GetTasksForSprintAsync(int sprintId,int currentUserId);
 }

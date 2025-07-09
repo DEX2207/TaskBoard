@@ -1,7 +1,6 @@
 using AutoMapper;
 using TaskBoard.Application.DTO;
 using TaskBoard.Domain.Entities;
-using Task = TaskBoard.Domain.Entities.Task;
 
 namespace TaskBoard.Application;
 
@@ -17,8 +16,8 @@ public class MappingProfile:Profile
         CreateMap<CreateSprintDto,Sprint>()
             .ForMember(s=>s.Id,o=>o.Ignore());
 
-        CreateMap<Task, TaskDto>();
-        CreateMap<CreateTaskDto,Task>()
+        CreateMap<Tasks, TaskDto>();
+        CreateMap<CreateTaskDto,Tasks>()
             .ForMember(t=>t.Id,o=>o.Ignore());
         
         CreateMap<User, UserDto>();

@@ -10,7 +10,7 @@ public class Sprint
     public DateTime EndDate { get; set; }
     
     public Project Project { get; set; }
-    public ICollection<Task> Tasks { get; set; }
+    public ICollection<Tasks> Tasks { get; set; }
     public ICollection<TaskComment> Comments { get; set; }
     public ICollection<Files> Files { get; set; }
 }

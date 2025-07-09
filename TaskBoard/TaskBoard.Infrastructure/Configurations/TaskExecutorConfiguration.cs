@@ -10,7 +10,7 @@ public class TaskExecutorConfiguration:IEntityTypeConfiguration<TaskExecutor>
     {
         builder.HasKey(te => new { te.TaskId, te.UserId });
 
-        builder.HasOne(te => te.Task)
+        builder.HasOne(te => te.Tasks)
             .WithMany(t => t.Executors)
             .HasForeignKey(te => te.TaskId);
         

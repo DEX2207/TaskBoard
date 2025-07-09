@@ -70,7 +70,7 @@ public class SprintService:ISprintService
         var taskAssignments = await _unitOfWork.TaskExecutors.FindAsync(ta => ta.UserId == userId);
 
         var sprintIds = taskAssignments
-            .Select(ta => ta.Task.SprintId)
+            .Select(ta => ta.Tasks.SprintId)
             .Distinct()
             .ToList();
 

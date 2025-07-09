@@ -7,6 +7,7 @@ using TaskBoard.Infrastructure;
 using TaskBoard.Infrastructure.Jwt;
 using TaskBoard.Infrastructure.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using TaskBoard.Application.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
