@@ -51,15 +51,19 @@ public class UserService: IUserService
     
     public async Task ConfirmRegistrationAsync(string email, string code)
     {
-        if (!_cache.TryGetValue(email, out PendingRegistration? pending))
+        if (!_cache.TryGetValue(email, out CachedRegistration? cashed))
             throw new Exception("Код устарел или не найден");
 
-        if (pending.Code != code)
+        if (cashed.Code != code)
             throw new Exception("Неверный код подтверждения");
-
-        // Создание пользователя
-        var user = _mapper.Map<User>(pending.UserDto);
-        user.Password = BCrypt.Net.BCrypt.HashPassword(pending.UserDto.Password);
+        var userdto = new CreateUserDto
+        {
+            UserName = cashed.UserName,
+            Email = cashed.Email,
+            Password = cashed.PasswordHash,
+        };
+        var user = _mapper.Map<User>(userdto);
+        //user.Password = cashed.PasswordHash;
         user.RegistrationDate = DateTime.UtcNow;
 
         await _uow.Users.AddAsync(user);
@@ -142,9 +146,4 @@ internal class CachedRegistration
     public string Email { get; set; }
     public string Code { get; set; }
     public DateTime ExpirationTime { get; set; }
-}
-public class PendingRegistration
-{
-    public string Code { get; set; }
-    public CreateUserDto UserDto { get; set; }
 }

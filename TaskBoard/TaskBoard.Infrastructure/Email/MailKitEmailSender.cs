@@ -16,6 +16,9 @@ public class MailKitEmailSender: IEmailSendler
     
     public async Task SendAsync(string to, string confirmationCode)
     {
+        var fromEmail = _configuration["EmailSettings:From"];
+        var password = _configuration["EmailSettings:Password"];
+        
         var emailMessage = new MimeMessage();
 
         emailMessage.From.Add(new MailboxAddress("TaskBoard", "TaskBoard")); // или из конфига
@@ -43,7 +46,7 @@ public class MailKitEmailSender: IEmailSendler
 
         using var client = new SmtpClient();
         await client.ConnectAsync("smtp.gmail.com", 465, true);
-        await client.AuthenticateAsync("From", "Password"); // или из конфига
+        await client.AuthenticateAsync(fromEmail, password);
         await client.SendAsync(emailMessage);
         await client.DisconnectAsync(true);
     }
