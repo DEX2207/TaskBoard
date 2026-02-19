@@ -63,7 +63,6 @@ public class UserService: IUserService
             Password = cashed.PasswordHash,
         };
         var user = _mapper.Map<User>(userdto);
-        //user.Password = cashed.PasswordHash;
         user.RegistrationDate = DateTime.UtcNow;
 
         await _uow.Users.AddAsync(user);
@@ -82,9 +81,9 @@ public class UserService: IUserService
 
         bool isPasswordValid = BCrypt.Net.BCrypt.Verify(password, existingUser.Password);
 
-        if (!isPasswordValid)
+        if (!isPasswordValid) 
             throw new UnauthorizedAccessException("Неверный пароль.");
-
+        
         var role = await _uow.Roles
             .FindAsync(r => r.UserId == existingUser.Id);
 

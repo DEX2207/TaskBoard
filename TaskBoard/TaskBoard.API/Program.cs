@@ -7,8 +7,12 @@ using TaskBoard.Infrastructure;
 using TaskBoard.Infrastructure.Jwt;
 using TaskBoard.Infrastructure.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.FileProviders;
+using Npgsql;
 using TaskBoard.Application.Interfaces;
 using TaskBoard.Application.Services;
+using TaskBoard.Domain.Enum;
+using TaskStatus = TaskBoard.Domain.Enum.TaskStatus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -60,6 +64,9 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+NpgsqlConnection.GlobalTypeMapper.MapEnum<Roles>("roles");
+NpgsqlConnection.GlobalTypeMapper.MapEnum<TaskStatus>("task_status");
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Configuration
@@ -67,7 +74,11 @@ builder.Configuration
     .AddUserSecrets<Program>();
 
 builder.Services.AddDbContext<AppDbContext>(options=>
-    options.UseNpgsql(connectionString));
+    options.UseNpgsql(connectionString, o =>
+    {
+        o.MapEnum<Roles>("roles");
+        o.MapEnum<TaskStatus>("task_status");
+    }));
 
 var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();
 
@@ -120,6 +131,8 @@ if (app.Environment.IsDevelopment())
 app.UseCors();
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 
 var summaries = new[]
 {

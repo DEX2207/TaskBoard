@@ -39,7 +39,6 @@ public class TaskController: ControllerBase
     [Authorize]
     public async Task<IActionResult> AssignTask([FromBody] AssignTaskDto dto)
     {
-        //var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         await _taskService.AssignUserToTaskAsync(dto);
         return Ok("Пользователь назначен на задачу");
     }

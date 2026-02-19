@@ -27,9 +27,7 @@ public class MappingProfile:Profile
         CreateMap<TaskComment, CommentDto>();
         CreateMap<CreateCommentDto,TaskComment>()
             .ForMember(c => c.Id, o => o.Ignore())
-            .ForMember(c => c.TaskId, o => o.Ignore())
             .ForMember(c => c.UserId, o => o.Ignore())
-            .ForMember(c => c.SprintId, o => o.Ignore())
             .ForMember(c => c.CommentDate, o => o.MapFrom(src=>DateTime.UtcNow));
 
         CreateMap<Files, FileDto>();

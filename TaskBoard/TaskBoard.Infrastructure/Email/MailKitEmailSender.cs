@@ -21,7 +21,7 @@ public class MailKitEmailSender: IEmailSendler
         
         var emailMessage = new MimeMessage();
 
-        emailMessage.From.Add(new MailboxAddress("TaskBoard", "TaskBoard")); // или из конфига
+        emailMessage.From.Add(new MailboxAddress("TaskBoard", "TaskBoard"));
         emailMessage.To.Add(MailboxAddress.Parse(to));
         emailMessage.Subject = "Подтверждение адреса электронной почты";
         emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)

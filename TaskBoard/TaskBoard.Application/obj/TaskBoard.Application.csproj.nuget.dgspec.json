@@ -1,40 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Application\\TaskBoard.Application.csproj": {}
+    "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Application/TaskBoard.Application.csproj": {}
   },
   "projects": {
-    "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Application\\TaskBoard.Application.csproj": {
+    "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Application/TaskBoard.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Application\\TaskBoard.Application.csproj",
+        "projectUniqueName": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Application/TaskBoard.Application.csproj",
         "projectName": "TaskBoard.Application",
-        "projectPath": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Application\\TaskBoard.Application.csproj",
-        "packagesPath": "C:\\Users\\Декс\\.nuget\\packages\\",
-        "outputPath": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Application\\obj\\",
+        "projectPath": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Application/TaskBoard.Application.csproj",
+        "packagesPath": "/home/Lain/.nuget/packages/",
+        "outputPath": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Application/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Декс\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/Lain/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Domain\\TaskBoard.Domain.csproj": {
-                "projectPath": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Domain\\TaskBoard.Domain.csproj"
+              "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Domain/TaskBoard.Domain.csproj": {
+                "projectPath": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Domain/TaskBoard.Domain.csproj"
               }
             }
           }
@@ -49,7 +42,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -57,7 +50,7 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[15.0.0, )"
+              "version": "[15.1.0, )"
             },
             "BCrypt.Net-Next": {
               "target": "Package",
@@ -83,38 +76,37 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Domain\\TaskBoard.Domain.csproj": {
+    "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Domain/TaskBoard.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Domain\\TaskBoard.Domain.csproj",
+        "projectUniqueName": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Domain/TaskBoard.Domain.csproj",
         "projectName": "TaskBoard.Domain",
-        "projectPath": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Domain\\TaskBoard.Domain.csproj",
-        "packagesPath": "C:\\Users\\Декс\\.nuget\\packages\\",
-        "outputPath": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Domain\\obj\\",
+        "projectPath": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Domain/TaskBoard.Domain.csproj",
+        "packagesPath": "/home/Lain/.nuget/packages/",
+        "outputPath": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Domain/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Декс\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/Lain/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -133,11 +125,17 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -149,12 +147,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

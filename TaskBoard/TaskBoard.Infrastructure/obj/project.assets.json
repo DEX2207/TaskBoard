@@ -2,12 +2,12 @@
   "version": 3,
   "targets": {
     "net9.0": {
-      "AutoMapper/15.0.0": {
+      "AutoMapper/15.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
           "Microsoft.Extensions.Options": "8.0.0",
-          "Microsoft.IdentityModel.JsonWebTokens": "8.0.1"
+          "Microsoft.IdentityModel.JsonWebTokens": "8.14.0"
         },
         "compile": {
           "lib/net9.0/AutoMapper.dll": {
@@ -722,7 +722,7 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.IdentityModel.Abstractions/8.12.1": {
+      "Microsoft.IdentityModel.Abstractions/8.14.0": {
         "type": "package",
         "compile": {
           "lib/net9.0/Microsoft.IdentityModel.Abstractions.dll": {
@@ -735,10 +735,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.JsonWebTokens/8.12.1": {
+      "Microsoft.IdentityModel.JsonWebTokens/8.14.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "8.12.1"
+          "Microsoft.IdentityModel.Tokens": "8.14.0"
         },
         "compile": {
           "lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
@@ -751,10 +751,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Logging/8.12.1": {
+      "Microsoft.IdentityModel.Logging/8.14.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Abstractions": "8.12.1"
+          "Microsoft.IdentityModel.Abstractions": "8.14.0"
         },
         "compile": {
           "lib/net9.0/Microsoft.IdentityModel.Logging.dll": {
@@ -767,11 +767,11 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Tokens/8.12.1": {
+      "Microsoft.IdentityModel.Tokens/8.14.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
-          "Microsoft.IdentityModel.Logging": "8.12.1"
+          "Microsoft.IdentityModel.Logging": "8.14.0"
         },
         "compile": {
           "lib/net9.0/Microsoft.IdentityModel.Tokens.dll": {
@@ -1134,7 +1134,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "AutoMapper": "15.0.0",
+          "AutoMapper": "15.1.0",
           "BCrypt.Net-Next": "4.0.3",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.Extensions.Caching.Abstractions": "9.0.6",
@@ -1150,6 +1150,9 @@
       "TaskBoard.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Npgsql": "9.0.3"
+        },
         "compile": {
           "bin/placeholder/TaskBoard.Domain.dll": {}
         },
@@ -1160,16 +1163,16 @@
     }
   },
   "libraries": {
-    "AutoMapper/15.0.0": {
-      "sha512": "pIOxis0VM4WGV48heK5Y93wysT2gD+hPQd7xFM23wUKsXJ77otM0ugg/wSeUDGJApvJgS3x6kggfLWhK16+E2g==",
+    "AutoMapper/15.1.0": {
+      "sha512": "uJXRC0ysO+i3fuW1onh0cUmaLbEwfMWwAZ5nw2eKhYccHwDgRhSC4Qj3rNdBy4vdhnC3r4NinhhldANKNWpH1Q==",
       "type": "package",
-      "path": "automapper/15.0.0",
+      "path": "automapper/15.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "README.md",
-        "automapper.15.0.0.nupkg.sha512",
+        "automapper.15.1.0.nupkg.sha512",
         "automapper.nuspec",
         "icon.png",
         "lib/net8.0/AutoMapper.dll",
@@ -2737,10 +2740,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.IdentityModel.Abstractions/8.12.1": {
-      "sha512": "JzWhET0VOCORyJbqDc1Wtdl8Q/l+I1MjFB0I/Jko+Ma691JZll8X6o9XwZtUce8FkqGuV4uY4/V1808XZOpDVg==",
+    "Microsoft.IdentityModel.Abstractions/8.14.0": {
+      "sha512": "iwbCpSjD3ehfTwBhtSNEtKPK0ICun6ov7Ibx6ISNA9bfwIyzI2Siwyi9eJFCJBwxowK9xcA1mj+jBWiigeqgcQ==",
       "type": "package",
-      "path": "microsoft.identitymodel.abstractions/8.12.1",
+      "path": "microsoft.identitymodel.abstractions/8.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2757,14 +2760,14 @@
         "lib/net9.0/Microsoft.IdentityModel.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
-        "microsoft.identitymodel.abstractions.8.12.1.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
         "microsoft.identitymodel.abstractions.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.JsonWebTokens/8.12.1": {
-      "sha512": "imi3xiRLzzKxN4m1aR9Z2X8GUmNsVH7GLA6AkwYStNnh3UzupFtHEEVk3GK1fCvnYdRbpnCGNYY6WQb9AfDAKg==",
+    "Microsoft.IdentityModel.JsonWebTokens/8.14.0": {
+      "sha512": "4jOpiA4THdtpLyMdAb24dtj7+6GmvhOhxf5XHLYWmPKF8ApEnApal1UnJsKO4HxUWRXDA6C4WQVfYyqsRhpNpQ==",
       "type": "package",
-      "path": "microsoft.identitymodel.jsonwebtokens/8.12.1",
+      "path": "microsoft.identitymodel.jsonwebtokens/8.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2781,14 +2784,14 @@
         "lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.xml",
-        "microsoft.identitymodel.jsonwebtokens.8.12.1.nupkg.sha512",
+        "microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
         "microsoft.identitymodel.jsonwebtokens.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Logging/8.12.1": {
-      "sha512": "39HjVkU7Voe2jRLmORRB5PoTmta1ZPKzUZCc6ldlNlLzdx+um0+fAnvfk05LUQPrNxpvb5ZoqF00SrNvyO2Fzg==",
+    "Microsoft.IdentityModel.Logging/8.14.0": {
+      "sha512": "eqqnemdW38CKZEHS6diA50BV94QICozDZEvSrsvN3SJXUFwVB9gy+/oz76gldP7nZliA16IglXjXTCTdmU/Ejg==",
       "type": "package",
-      "path": "microsoft.identitymodel.logging/8.12.1",
+      "path": "microsoft.identitymodel.logging/8.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2805,14 +2808,14 @@
         "lib/net9.0/Microsoft.IdentityModel.Logging.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
-        "microsoft.identitymodel.logging.8.12.1.nupkg.sha512",
+        "microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
         "microsoft.identitymodel.logging.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Tokens/8.12.1": {
-      "sha512": "DzgPEABn3eZmIk4lhov0QPcoHkIbnAfgkyDPM7uGuWDHeockR9DdqNCD9Zy30hPfExu5VhbOXn9oPRi+tFUhEQ==",
+    "Microsoft.IdentityModel.Tokens/8.14.0": {
+      "sha512": "lKIZiBiGd36k02TCdMHp1KlNWisyIvQxcYJvIkz7P4gSQ9zi8dgh6S5Grj8NNG7HWYIPfQymGyoZ6JB5d1Lo1g==",
       "type": "package",
-      "path": "microsoft.identitymodel.tokens/8.12.1",
+      "path": "microsoft.identitymodel.tokens/8.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2829,7 +2832,7 @@
         "lib/net9.0/Microsoft.IdentityModel.Tokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
-        "microsoft.identitymodel.tokens.8.12.1.nupkg.sha512",
+        "microsoft.identitymodel.tokens.8.14.0.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
@@ -3419,43 +3422,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Декс\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/Lain/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Infrastructure\\TaskBoard.Infrastructure.csproj",
+      "projectUniqueName": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Infrastructure/TaskBoard.Infrastructure.csproj",
       "projectName": "TaskBoard.Infrastructure",
-      "projectPath": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Infrastructure\\TaskBoard.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Декс\\.nuget\\packages\\",
-      "outputPath": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Infrastructure\\obj\\",
+      "projectPath": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Infrastructure/TaskBoard.Infrastructure.csproj",
+      "packagesPath": "/home/Lain/.nuget/packages/",
+      "outputPath": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Infrastructure/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Декс\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/Lain/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Application\\TaskBoard.Application.csproj": {
-              "projectPath": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Application\\TaskBoard.Application.csproj"
+            "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Application/TaskBoard.Application.csproj": {
+              "projectPath": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Application/TaskBoard.Application.csproj"
             },
-            "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Domain\\TaskBoard.Domain.csproj": {
-              "projectPath": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Domain\\TaskBoard.Domain.csproj"
+            "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Domain/TaskBoard.Domain.csproj": {
+              "projectPath": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Domain/TaskBoard.Domain.csproj"
             }
           }
         }
@@ -3470,7 +3465,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -3516,6 +3511,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[9.0.11, 9.0.11]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -3524,7 +3525,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

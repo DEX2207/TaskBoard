@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Opt8ABLfmWM=",
+  "dgSpecHash": "E1aBtOvN2PE=",
   "success": true,
-  "projectFilePath": "D:\\INTER (E)\\1111\\учебная практика\\3 курс\\TaskBoard\\TaskBoard\\TaskBoard.Domain\\TaskBoard.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/run/media/Lain/52E5-33D4/INTER (E)/1111/учебная практика/3 курс/TaskBoard/TaskBoard/TaskBoard.Domain/TaskBoard.Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/Lain/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "/home/Lain/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.2/microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "/home/Lain/.nuget/packages/npgsql/9.0.3/npgsql.9.0.3.nupkg.sha512",
+    "/home/Lain/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.11/microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

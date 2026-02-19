@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using TaskBoard.Domain.Entities;
+using TaskBoard.Domain.Enum;
 using TaskBoard.Infrastructure.Configurations;
+using TaskStatus = TaskBoard.Domain.Enum.TaskStatus;
 
 namespace TaskBoard.Infrastructure;
 
@@ -25,12 +27,14 @@ public class AppDbContext: DbContext
     {
         base.OnModelCreating(modelBuilder);
         
-        EnumConfigurations.ConfigureEnums(modelBuilder);
+        //EnumConfigurations.ConfigureEnums(modelBuilder);
         modelBuilder.ApplyConfiguration(new FileConfiguration());
         modelBuilder.ApplyConfiguration(new RoleConfiguration());
         modelBuilder.ApplyConfiguration(new SprintConfiguration());
         modelBuilder.ApplyConfiguration(new TaskConfiguration());
         modelBuilder.ApplyConfiguration(new TaskCommentConfiguration());
         modelBuilder.ApplyConfiguration(new TaskExecutorConfiguration());
+        modelBuilder.HasPostgresEnum<Roles>("public");
+        modelBuilder.HasPostgresEnum<TaskStatus>("public");
     }
 }
